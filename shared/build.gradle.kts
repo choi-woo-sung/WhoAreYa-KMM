@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinCocoapods)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.kmp.nativeCoroutines)
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -32,6 +34,9 @@ kotlin {
     }
 
     sourceSets {
+        kotlin.sourceSets.all {
+            languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
+        }
         val commonMain by getting {
             dependencies {
                 implementation(libs.ktor.client.core)

@@ -5,7 +5,11 @@ compose = "1.5.4"
 compose-compiler = "1.5.6"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.2"
+ksp = "1.9.21-1.0.16"
+kmp-nativeCoroutines = "1.0.0-ALPHA-24"
 ktor = "2.3.7"
+koin_version = "3.5.3"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
@@ -22,9 +26,18 @@ ktor-client-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktor" }
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
 ktor-client-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+
+#Koin
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin_version" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin_version" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin_android_version" }
+#koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin_android_version" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kmp-nativeCoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "kmp-nativeCoroutines" }
