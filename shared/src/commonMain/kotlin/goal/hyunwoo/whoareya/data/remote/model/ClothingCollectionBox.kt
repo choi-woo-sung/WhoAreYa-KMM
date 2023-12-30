@@ -6,10 +6,10 @@ data class ProductDto(
     val totalCount: Long,
     val currentCount: Long,
     val matchCount: Long,
-    val data: List<ClothingCollectionBox>
+    val data: List<ClothingCollectionBox>,
 )
 
 data class ClothingCollectionBox(
     val name: String,
-    val location: String
+    val location: String,
 )
