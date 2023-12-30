@@ -8,6 +8,7 @@ androidx-activityCompose = "1.8.2"
 ksp = "1.9.21-1.0.16"
 kmp-nativeCoroutines = "1.0.0-ALPHA-24"
 ktor = "2.3.7"
+naverMapCompose = "1.4.0"
 koin_version = "3.5.3"
 
 [libraries]
@@ -18,7 +19,7 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
-
+naverMapCompose = { module = "io.github.fornewid:naver-map-compose", version.ref = "naverMapCompose" }
 #Ktor
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
@@ -32,6 +33,7 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin_version" 
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin_version" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin_android_version" }
 #koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin_android_version" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

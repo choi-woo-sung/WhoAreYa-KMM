@@ -57,6 +57,11 @@ android {
     namespace = "goal.hyunwoo.whoareya"
     compileSdk = 34
     defaultConfig {
-        minSdk = 24
+        minSdk = 28
     }
 }
+
+task("testClasses").doLast {
+    println("This is a dummy testClasses task")
+}
+
