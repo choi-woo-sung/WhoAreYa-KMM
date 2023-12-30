@@ -1,0 +1,6 @@
+framework module Pods_whoAreYaIosApp {
+  umbrella header "Pods-whoAreYaIosApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
