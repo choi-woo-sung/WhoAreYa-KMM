@@ -10,7 +10,7 @@ kmp-nativeCoroutines = "1.0.0-ALPHA-24"
 ktor = "2.3.7"
 naverMapCompose = "1.4.0"
 koin_version = "3.5.3"
-
+koin_android_version = "3.3.2"
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
@@ -31,7 +31,7 @@ ktor-client-negotiation = { module = "io.ktor:ktor-client-content-negotiation", 
 #Koin
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin_version" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin_version" }
-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin_android_version" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin_version" }
 #koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin_android_version" }
 
 

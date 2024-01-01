@@ -43,6 +43,8 @@ kotlin {
                 implementation(libs.ktor.client.serialization)
                 implementation(libs.ktor.client.serialization.json)
                 implementation(libs.ktor.client.negotiation)
+                implementation(libs.koin.core)
+//                implementation(libs.koin.test)
             }
         }
         val commonTest by getting {
@@ -64,4 +66,3 @@ android {
 task("testClasses").doLast {
     println("This is a dummy testClasses task")
 }
-
