@@ -10,7 +10,7 @@ class ClothRepository(
     private val clothRemoteSource: ClothRemoteSource,
 ) {
     @NativeCoroutines
-    suspend fun getClothingCollectionBoxInfo(): Flow<List<ClothingCollectionBox>> =
+    fun getClothingCollectionBoxInfo(): Flow<List<ClothingCollectionBox>> =
         flow {
             clothRemoteSource.getClothingCollectionBoxInfo().onSuccess {
                 emit(it.data)

@@ -3,6 +3,7 @@
 
     <application
         android:allowBackup="false"
+        android:name=".WhoAreYaApplication"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity

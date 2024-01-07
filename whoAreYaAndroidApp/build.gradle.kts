@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.androidApplication)
 }
 
 android {
@@ -8,7 +8,7 @@ android {
     compileSdk = 34
     defaultConfig {
         applicationId = "goal.hyunwoo.whoareya.android"
-        minSdk = 24
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -46,5 +46,6 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.naverMapCompose)
     implementation(libs.koin.android)
+    implementation(libs.koin.android.compose)
     debugImplementation(libs.compose.ui.tooling)
 }
