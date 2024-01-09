@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kmp.nativeCoroutines)
+    kotlin("plugin.serialization") version libs.versions.kotlin
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -50,6 +51,17 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(libs.kotlin.test)
+            }
+        }
+
+        val androidMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.android)
+            }
+        }
+        val iosMain by getting {
+            dependencies {
+                implementation(libs.ktor.client.ios)
             }
         }
     }

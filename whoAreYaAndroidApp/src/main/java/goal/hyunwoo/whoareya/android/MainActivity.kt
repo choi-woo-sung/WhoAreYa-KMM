@@ -1,6 +1,7 @@
 package goal.hyunwoo.whoareya.android
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
@@ -8,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -36,16 +38,27 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingView(text: String) {
     Column {
-        Text(text =text)
+        Text(text = text)
         ClosthMap()
     }
 }
 
 @OptIn(ExperimentalNaverMapApi::class)
 @Composable
-fun ClosthMap( viewModel: MainViewModel = koinViewModel()) {
-    val uiState = viewModel.uiState.collectAsState()
-    NaverMap()
+fun ClosthMap(viewModel: MainViewModel = koinViewModel()) {
+    val uiState = viewModel.uiState.collectAsState().value
+    NaverMap() {
+        when (uiState) {
+            is UiState.Error -> TODO()
+            UiState.Loading -> {}
+            is UiState.Success -> {
+                uiState.data.forEach {
+                    Log.d("ClosthMap", "ClosthMap: $it")
+                }
+            }
+        }
+
+    }
 }
 
 @Preview

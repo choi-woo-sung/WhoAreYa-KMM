@@ -2,10 +2,13 @@ package goal.hyunwoo.whoareya.di
 
 import goal.hyunwoo.whoareya.data.remote.ClothRemoteSource
 import goal.hyunwoo.whoareya.network.KtorApi
-import goal.hyunwoo.whoareya.network.KtorApiImpl
+import goal.hyunwoo.whoareya.network.ClothKtorApiImpl
+import goal.hyunwoo.whoareya.network.NaverAPI
+import goal.hyunwoo.whoareya.network.NaverKtorApiImpl
 import goal.hyunwoo.whoareya.network.ProductAPI
 import goal.hyunwoo.whoareya.repository.ClothRepository
 import org.koin.core.context.startKoin
+import org.koin.core.qualifier.named
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
 import kotlin.time.ExperimentalTime
@@ -19,8 +22,10 @@ fun initKoin(enableNetworkLogs: Boolean = false, appDeclaration: KoinAppDeclarat
 
 @ExperimentalTime
 fun commonModule() = module {
-    single<KtorApi> { KtorApiImpl() }
-    factory { ProductAPI(get()) }
+    single<KtorApi>(qualifier = named("Cloth") ) { ClothKtorApiImpl() }
+    single<KtorApi>(qualifier = named("Naver") ) { NaverKtorApiImpl() }
+    factory { ProductAPI(get(named("Cloth"))) }
+    factory { NaverAPI(get(named("Naver"))) }
     factory { ClothRemoteSource(get()) }
     single { ClothRepository(get()) }
 //    single { GalwayBusRepository() }
