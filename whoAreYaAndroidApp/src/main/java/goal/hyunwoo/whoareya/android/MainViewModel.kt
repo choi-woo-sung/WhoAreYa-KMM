@@ -1,24 +1,51 @@
 package goal.hyunwoo.whoareya.android
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import goal.hyunwoo.whoareya.repository.ClothRepository
+import goal.hyunwoo.whoareya.repository.MapRepository
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.flatMapConcat
+import kotlinx.coroutines.flow.flatMapMerge
+import kotlinx.coroutines.flow.forEach
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.mapNotNull
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
-import org.koin.core.component.KoinComponent
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.flow.transform
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val repository: ClothRepository
+    private val clothRepository: ClothRepository,
+    private val mapRepository: MapRepository
 ) : ViewModel() {
 
-     val uiState = repository.getClothingCollectionBoxInfo()
-        .map { UiState.Success(it) }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000L), UiState.Loading)
+    private var _uiState = MutableStateFlow<UiState<List<Pair<String, String>>>>(UiState.Loading)
+    val uiState = MutableStateFlow<UiState<List<Pair<String, String>>>>(UiState.Loading)
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    fun setMarker() = viewModelScope.launch {
+        uiState.update { UiState.Loading }
+        val result = clothRepository.getClothingCollectionBoxInfo().flatMapConcat { list ->
+            list.asFlow()
+        }.flatMapConcat {
+            mapRepository.fetchGeoCode(it.location)
+        }.mapNotNull { geoCode ->
+            geoCode?.addresses?.firstOrNull()?.let { address ->
+                Pair(address.x, address.y)
+            }
+        }.onEach {
+            Log.d("테스트", "setMarker: $it")
+        }.toList()
+        uiState.update { UiState.Success(result) }
+    }
 }
-
-
 
 
 sealed class UiState<out T : Any> {

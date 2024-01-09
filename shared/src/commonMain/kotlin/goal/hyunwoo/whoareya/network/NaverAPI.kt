@@ -1,5 +1,6 @@
 package goal.hyunwoo.whoareya.network
 
+import goal.hyunwoo.whoareya.data.remote.model.GeoCodeReponse
 import goal.hyunwoo.whoareya.data.remote.model.ProductDto
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -7,7 +8,7 @@ import io.ktor.client.request.headers
 import io.ktor.http.HttpHeaders
 
 class NaverAPI(private val ktorApi: KtorApi) : KtorApi by ktorApi {
-    suspend fun fetchGeoCode(val query : String): Result<ProductDto> =
+    suspend fun fetchGeoCode(query : String): Result<GeoCodeReponse> =
         runCatching {
             return@runCatching ktorApi.client.get {
                 headers {

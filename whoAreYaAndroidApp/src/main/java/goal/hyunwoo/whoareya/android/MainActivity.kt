@@ -13,7 +13,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.compose.ExperimentalNaverMapApi
+import com.naver.maps.map.compose.Marker
+import com.naver.maps.map.compose.MarkerState
 import com.naver.maps.map.compose.NaverMap
 import goal.hyunwoo.whoareya.Greeting
 import org.koin.androidx.compose.koinViewModel
@@ -47,13 +50,19 @@ fun GreetingView(text: String) {
 @Composable
 fun ClosthMap(viewModel: MainViewModel = koinViewModel()) {
     val uiState = viewModel.uiState.collectAsState().value
-    NaverMap() {
+    NaverMap(onMapLoaded = {
+        viewModel.setMarker()
+    }) {
         when (uiState) {
             is UiState.Error -> TODO()
             UiState.Loading -> {}
             is UiState.Success -> {
                 uiState.data.forEach {
-                    Log.d("ClosthMap", "ClosthMap: $it")
+                    Marker(
+                        MarkerState(
+                            position = LatLng(it.second.toDouble(), it.first.toDouble())
+                        )
+                    )
                 }
             }
         }
