@@ -59,6 +59,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6BD6D5F6E63F8F9A60506C58 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
+		6BD6DBE539057A32F08FB1BC /* choeuseong.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				6BD6D5F6E63F8F9A60506C58 /* xcschemes */,
+			);
+			name = choeuseong.xcuserdatad;
+			path = whoAreYaIosApp.xcworkspace/xcuserdata/choeuseong.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		6BD6DCA6DC3ED3A881D3D894 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = xcschemes;
+			path = whoAreYaIosApp.xcodeproj/xcuserdata/choeuseong.xcuserdatad/xcschemes;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +90,8 @@
 				7555FF7C242A565900829871 /* Products */,
 				7555FFB0242A642200829871 /* Frameworks */,
 				DCABB7E01A908F210CE58222 /* Pods */,
+				6BD6DBE539057A32F08FB1BC /* choeuseong.xcuserdatad */,
+				6BD6DCA6DC3ED3A881D3D894 /* xcschemes */,
 			);
 			sourceTree = "<group>";
 		};

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -16,6 +16,7 @@
 			dependencies = (
 			);
 			name = NMapsGeometry;
+			productName = NMapsGeometry;
 		};
 		8777C9F6889E59EFFD631D80AEE9048B /* shared */ = {
 			isa = PBXAggregateTarget;
@@ -26,6 +27,7 @@
 			dependencies = (
 			);
 			name = shared;
+			productName = shared;
 		};
 		8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */ = {
 			isa = PBXAggregateTarget;
@@ -37,6 +39,7 @@
 				F3A7ACF8B2D15452D404DE3D875C0154 /* PBXTargetDependency */,
 			);
 			name = NMapsMap;
+			productName = NMapsMap;
 		};
 /* End PBXAggregateTarget section */
 
@@ -83,20 +86,20 @@
 		1A326C79B1B897CBCFDC36BFF5174A43 /* NMapsGeometry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.debug.xcconfig; sourceTree = "<group>"; };
 		39F4A43269B9392498CE2146087F7670 /* Pods-whoAreYaIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-whoAreYaIosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3BA7C472FDE4DA8C972049310FC0A4D8 /* shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.release.xcconfig; sourceTree = "<group>"; };
-		485FAE6318CCD7779377C7AA4A7B3528 /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsGeometry.xcframework; path = framework/NMapsGeometry.xcframework; sourceTree = "<group>"; };
+		485FAE6318CCD7779377C7AA4A7B3528 /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = NMapsGeometry.xcframework; path = framework/NMapsGeometry.xcframework; sourceTree = "<group>"; };
 		4B849D569E73DCCCCBAE648520338A25 /* Pods-whoAreYaIosApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-whoAreYaIosApp-frameworks.sh"; sourceTree = "<group>"; };
-		4F0C55D25B9900DE7936740E68EFDFCF /* NMapsMap.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsMap.xcframework; path = framework/NMapsMap.xcframework; sourceTree = "<group>"; };
+		4F0C55D25B9900DE7936740E68EFDFCF /* NMapsMap.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = NMapsMap.xcframework; path = framework/NMapsMap.xcframework; sourceTree = "<group>"; };
 		53BB18D8DE6118DEC0AAC01027DBECA8 /* NMapsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.release.xcconfig; sourceTree = "<group>"; };
 		5AEE9BE8E74F044DEE692C0235482587 /* Pods-whoAreYaIosApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-whoAreYaIosApp-dummy.m"; sourceTree = "<group>"; };
 		5B00E228C13DFDA11CEF90698483B132 /* Pods-whoAreYaIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-whoAreYaIosApp.release.xcconfig"; sourceTree = "<group>"; };
-		64E082BE0CBDA2E1357E3F7B7977B047 /* shared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = shared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		64E082BE0CBDA2E1357E3F7B7977B047 /* shared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = shared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6D2612CAE9E0F18CD6F58351AC0E5802 /* Pods-whoAreYaIosApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-whoAreYaIosApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7F89040B8DC7FC773592AA5FE110E9DF /* NMapsGeometry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.release.xcconfig; sourceTree = "<group>"; };
 		97307757AD6F46FFCA23E62CB0B07025 /* Pods-whoAreYaIosApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-whoAreYaIosApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		983FCEF2808419DF12F69DFEBD7685D4 /* NMapsMap-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsMap-xcframeworks.sh"; sourceTree = "<group>"; };
 		98419842F5CB6D43A98D0270CCD269AB /* Pods-whoAreYaIosApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-whoAreYaIosApp-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B04BC3D4569883EA0849F4EB5B769168 /* Pods-whoAreYaIosApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-whoAreYaIosApp.modulemap"; sourceTree = "<group>"; };
 		D67526985D061172F069F7E61DC8900A /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = build/cocoapods/framework/shared.framework; sourceTree = "<group>"; };
 		DE0AD311A77F37DB5A3BAEE334CA3A4D /* shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.debug.xcconfig; sourceTree = "<group>"; };
@@ -166,7 +169,6 @@
 				DC955F600E602E5041F1000DC79753BB /* Frameworks */,
 				169A894F474781F666BE8D90408D3828 /* Support Files */,
 			);
-			name = NMapsGeometry;
 			path = NMapsGeometry;
 			sourceTree = "<group>";
 		};
@@ -195,7 +197,6 @@
 				2ED541A35C7BD1778556550CF4846D2F /* Frameworks */,
 				A3E28C362EAC5C5A2CCC22EE5E2FDA30 /* Support Files */,
 			);
-			name = NMapsMap;
 			path = NMapsMap;
 			sourceTree = "<group>";
 		};
@@ -456,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,7 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,7 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -743,7 +744,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
