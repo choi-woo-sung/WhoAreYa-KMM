@@ -15,6 +15,10 @@ import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
 import kotlin.time.ExperimentalTime
 
+
+//IOS에 의해 호출
+@ExperimentalTime
+fun initKoin() = initKoin() {}
 @OptIn(ExperimentalTime::class)
 fun initKoin(enableNetworkLogs: Boolean = false, appDeclaration: KoinAppDeclaration = {}) =
     startKoin {

@@ -1,15 +1,21 @@
 PODS:
+  - KMPNativeCoroutinesAsync (1.0.0-ALPHA-23):
+    - KMPNativeCoroutinesCore (= 1.0.0-ALPHA-23)
+  - KMPNativeCoroutinesCore (1.0.0-ALPHA-23)
   - NMapsGeometry (1.0.1)
   - NMapsMap (3.17.0):
     - NMapsGeometry
   - shared (1.0.0)
 
 DEPENDENCIES:
+  - KMPNativeCoroutinesAsync (= 1.0.0-ALPHA-23)
   - NMapsMap
   - shared (from `../shared`)
 
 SPEC REPOS:
   trunk:
+    - KMPNativeCoroutinesAsync
+    - KMPNativeCoroutinesCore
     - NMapsGeometry
     - NMapsMap
 
@@ -18,10 +24,12 @@ EXTERNAL SOURCES:
     :path: "../shared"
 
 SPEC CHECKSUMS:
+  KMPNativeCoroutinesAsync: 4b7cde89ba499f91a861d785c7d14adb663a0f82
+  KMPNativeCoroutinesCore: 1caf87dda1abae3385f98015b2de0e6f5eeb4edf
   NMapsGeometry: 53c573ead66466681cf123f99f698dc8071a4b83
   NMapsMap: a5b909a31b6f3d27a670f6eb2ddc913c38975474
   shared: 89aa7d80d20cb4c58848bd7b58922f79dce85c34
 
-PODFILE CHECKSUM: 3c438f3e8b9245e4fbcb7ac15fe575dab92e827d
+PODFILE CHECKSUM: 4cf43cd49067b5a492126b50fb68a9bf79cb50f1
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.14.3

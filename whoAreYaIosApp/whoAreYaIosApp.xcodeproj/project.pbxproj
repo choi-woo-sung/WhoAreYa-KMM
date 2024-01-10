@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		84FCDCA64A91BE43003FD5EE /* Pods_whoAreYaIosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB33B600E6E43CBC1C09B82 /* Pods_whoAreYaIosApp.framework */; };
+		CAC872B62B4E995F00BB88D1 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC872B52B4E995F00BB88D1 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,7 @@
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8239595B1AA607925FCFB762 /* Pods-whoAreYaIosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whoAreYaIosApp.release.xcconfig"; path = "Target Support Files/Pods-whoAreYaIosApp/Pods-whoAreYaIosApp.release.xcconfig"; sourceTree = "<group>"; };
+		CAC872B52B4E995F00BB88D1 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D8755694576CE455194D42A1 /* Pods-whoAreYaIosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whoAreYaIosApp.debug.xcconfig"; path = "Target Support Files/Pods-whoAreYaIosApp/Pods-whoAreYaIosApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				CAC872B52B4E995F00BB88D1 /* MapViewModel.swift */,
 			);
 			path = whoAreYaIosApp;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				CAC872B62B4E995F00BB88D1 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

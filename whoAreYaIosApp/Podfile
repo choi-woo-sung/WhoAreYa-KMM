@@ -3,4 +3,5 @@ target 'whoAreYaIosApp' do
   platform :ios, '16.0'
   pod 'shared', :path => '../shared'
   pod 'NMapsMap'
+  pod 'KMPNativeCoroutinesAsync', '1.0.0-ALPHA-23'    # Swift Concurrency implementation
 end
